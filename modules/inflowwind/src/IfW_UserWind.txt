@@ -1,0 +1,57 @@
+###################################################################################################################################
+# Registry for IfW_UserWind, creates MODULE IfW_UserWind_Types
+# Module IfW_UserWind_Types contains all of the user-defined types needed in IfW_UserWind. It also contains copy, destroy, pack, and
+# unpack routines associated with each defined data types.
+###################################################################################################################################
+# Entries are of the form
+# keyword <IfW_UserWind[/ModuleAbvr]> <TypeName>   <FieldType>    <FieldName>  <Dims>  <Ctrl> <DNAME> <DESCRIP> <UNITS>
+###################################################################################################################################
+
+include Registry_NWTC_Library.txt
+
+
+#########################
+
+typedef IfW_UserWind/IfW_UserWind InitInputType CHARACTER(1024)   WindFileName  -     -     -     "Name of the wind file to use"                         -
+typedef IfW_UserWind/IfW_UserWind InitInputType CHARACTER(1024)   LayoutFileName  -     -     -     "Name of the layout file to use"                         -
+typedef IfW_UserWind/IfW_UserWind InitInputType CHARACTER(1024)   FlorisFileName  -     -     -     "Name of the layout file to use"                         -
+
+
+# Init Output
+typedef  ^                       InitOutputType       ProgDesc    Ver               -     -     -     "Version information off HHWind submodule"         -
+
+
+# ..... Misc/Optimization variables.................................................................................................
+# Define any data that are used only for efficiency purposes (these variables are not associated with time):
+#   e.g. indices for searching in an array, large arrays that are local variables in any routine called multiple times, etc.
+typedef    ^              MiscVarType          ReKi     AllInAD {:} - -  "All Inputs arriving from Aerodyn at time step t" -
+typedef    ^              ^                    ReKi     BlPos   {:}{:} - -  "All Nodes Blades arriving from Aerodyn at time step t" -
+typedef    ^              ^                    IntKi    BlOutNd  {:} - -  "All Nodes Blades arriving from Aerodyn at time step t" -
+typedef    ^              ^                    ReKi     YawAngle - - -  "All Inputs arriving from Servofyn at time step t" -
+
+
+# ..... Parameters ................................................................................................................
+# Define parameters here:
+# Time step for integration of continuous states (if a fixed-step integrator is used) and update of discrete states:
+typedef  ^                    ParameterType       Reki     dT     -     -     -     "Time Step"                     -
+typedef  ^                    ^                   Reki     Ttot   -     -     -     "Time Total Simulation"                     -
+typedef  ^                    ^                   Reki     Vb   {:}     -     -     "Basic Wind Intensity"                     -
+typedef  ^                    ^                   Reki     z0   {:}     -     -     "terrain roughness"                     -
+typedef  ^                    ^                   Reki     zmin   {:}     -     -     "Minimum terrain height"                     -
+typedef  ^                    ^                   Reki     WindDir   {:}     -     -     "Wind Direction"                     -
+typedef  ^                    ^                   Reki     WindVeer   {:}     -     -     "Wind Veer"                     -
+typedef  ^                    ^                   Reki     Tint   {:}     -     -     "Wind Veer"                     -
+typedef  ^                    ^                   Reki     ka   -     -     -     "Wake par 1"                     -
+typedef  ^                    ^                   Reki     kb   -     -     -     "Wake par 2"                     -
+typedef  ^                    ^                   Reki     alpha   -     -     -     "Wake par 3"                     -
+typedef  ^                    ^                   Reki     beta   -     -     -     "Wake par 4"                     -
+typedef  ^                    ^                   Reki     zhub  {:}    -     -     "Hub height various turbines"                     -
+typedef  ^                    ^                   Reki     drot  {:}    -     -     "Rotor diameter various turbines"                     -
+typedef  ^                    ^                   Reki     ti_par {:}    -     -     "turbulence intensity parameters"                     -
+typedef  ^                    ^                   Reki     Layout {:}{:}     -     -     "Layout of Wind Farm"                     -
+typedef  ^                    ^                   Intki    NumDataLines  -     -     -     "Number data lines in file wind"                     -
+
+
+
+
+

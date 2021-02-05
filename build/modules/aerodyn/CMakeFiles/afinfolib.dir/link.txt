@@ -1,0 +1,2 @@
+/usr/bin/ar qc libafinfolib.a  CMakeFiles/afinfolib.dir/src/AirfoilInfo.f90.o CMakeFiles/afinfolib.dir/src/AirfoilInfo_Types.f90.o
+/usr/bin/ranlib libafinfolib.a

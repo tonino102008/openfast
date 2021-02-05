@@ -1,0 +1,2 @@
+/usr/bin/ar qc libaerodyn14lib.a  CMakeFiles/aerodyn14lib.dir/src/AeroDyn14.f90.o CMakeFiles/aerodyn14lib.dir/src/AeroSubs.f90.o CMakeFiles/aerodyn14lib.dir/src/DWM.f90.o CMakeFiles/aerodyn14lib.dir/src/DWM_Wake_Sub_ver2.f90.o CMakeFiles/aerodyn14lib.dir/src/GenSubs.f90.o CMakeFiles/aerodyn14lib.dir/AeroDyn14_Types.f90.o CMakeFiles/aerodyn14lib.dir/DWM_Types.f90.o
+/usr/bin/ranlib libaerodyn14lib.a

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsctypeslib.a  CMakeFiles/sctypeslib.dir/SuperController_Types.f90.o
+/usr/bin/ranlib libsctypeslib.a

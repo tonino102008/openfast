@@ -1,0 +1,70 @@
+Determining if the Fortran sgemm exists failed with the following output:
+Change Dir: /home/antonio/OpenFAST/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_67430/fast"
+/usr/bin/make -f CMakeFiles/cmTC_67430.dir/build.make CMakeFiles/cmTC_67430.dir/build
+make[1]: ingresso nella directory "/home/antonio/OpenFAST/build/CMakeFiles/CMakeTmp"
+Building Fortran object CMakeFiles/cmTC_67430.dir/testFortranCompiler.f.o
+/usr/bin/gfortran   -fpic  -ffree-line-length-none -cpp -fdefault-real-8    -c /home/antonio/OpenFAST/build/CMakeFiles/CMakeTmp/testFortranCompiler.f -o CMakeFiles/cmTC_67430.dir/testFortranCompiler.f.o
+Linking Fortran executable cmTC_67430
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_67430.dir/link.txt --verbose=1
+/usr/bin/gfortran     -fpic  -ffree-line-length-none -cpp -fdefault-real-8  CMakeFiles/cmTC_67430.dir/testFortranCompiler.f.o  -o cmTC_67430 
+/usr/bin/ld: CMakeFiles/cmTC_67430.dir/testFortranCompiler.f.o: in function `MAIN__':
+testFortranCompiler.f:(.text+0xa): undefined reference to `sgemm_'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_67430.dir/build.make:87: cmTC_67430] Error 1
+make[1]: uscita dalla directory "/home/antonio/OpenFAST/build/CMakeFiles/CMakeTmp"
+make: *** [Makefile:121: cmTC_67430/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/antonio/OpenFAST/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_2c188/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2c188.dir/build.make CMakeFiles/cmTC_2c188.dir/build
+make[1]: ingresso nella directory "/home/antonio/OpenFAST/build/CMakeFiles/CMakeTmp"
+Building C object CMakeFiles/cmTC_2c188.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_2c188.dir/CheckSymbolExists.c.o   -c /home/antonio/OpenFAST/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_2c188
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2c188.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_2c188.dir/CheckSymbolExists.c.o  -o cmTC_2c188 
+/usr/bin/ld: CMakeFiles/cmTC_2c188.dir/CheckSymbolExists.c.o: in function `main':
+CheckSymbolExists.c:(.text+0x1f): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_2c188.dir/build.make:87: cmTC_2c188] Error 1
+make[1]: uscita dalla directory "/home/antonio/OpenFAST/build/CMakeFiles/CMakeTmp"
+make: *** [Makefile:121: cmTC_2c188/fast] Error 2
+
+File /home/antonio/OpenFAST/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/antonio/OpenFAST/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e6bff/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e6bff.dir/build.make CMakeFiles/cmTC_e6bff.dir/build
+make[1]: ingresso nella directory "/home/antonio/OpenFAST/build/CMakeFiles/CMakeTmp"
+Building C object CMakeFiles/cmTC_e6bff.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_e6bff.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.13/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e6bff
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e6bff.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_e6bff.dir/CheckFunctionExists.c.o  -o cmTC_e6bff -lpthreads 
+/usr/bin/ld: impossibile trovare -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_e6bff.dir/build.make:87: cmTC_e6bff] Error 1
+make[1]: uscita dalla directory "/home/antonio/OpenFAST/build/CMakeFiles/CMakeTmp"
+make: *** [Makefile:121: cmTC_e6bff/fast] Error 2
+
+

@@ -1,0 +1,14 @@
+###################################################################################################################################
+# Registry for Forpy_MOD in the FAST Modularization Framework
+# This Registry file is used to create MODULE ServoDyn_Types  which contains all of the user-defined types needed in ServoDyn.
+# It also contains copy, destroy, pack, and unpack routines associated with each defined data types.
+# See the NWTC Programmer's Handbook for further information on the format/contents of this file.
+#
+# Entries are of the form
+# <keyword>	<ModuleName/ModName>	<TypeName>	<FieldType>	<FieldName>	<Dims>	<IO>	<DNAME>	<DESCRIP>	<UNITS>
+#
+# Use ^ as a shortcut for the value in the same column from the previous line.
+###################################################################################################################################
+
+usefrom    ServoDyn/SrvD               module_py       module_py            DISCON
+usefrom    ServoDyn/SrvD               list                 list            paths

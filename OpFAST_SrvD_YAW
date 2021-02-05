@@ -1,0 +1,14 @@
+#!/bin/bash
+
+mkdir build
+cd build
+cmake .. -DBUILD_OPENFAST_CPP_API:BOOL=ON -DFPE_TRAP_ENABLED:BOOL=ON
+make
+gfortran    -fpic -ffree-line-length-none -cpp -fdefault-real-8 -O3 -DNDEBUG -O3 /home/antonio/OpenFAST/build/modules/servodyn/CMakeFiles/servodyn_driver.dir/src/ServoDyn_Driver.f90.o  -o modules/servodyn/servodyn_driver /home/antonio/OpenFAST/modules/servodyn/src/forpy_mod.o `python3-config --ldflags` -I/home/antonio/OpenFAST/build/ftnmods -lservodynlib -lnwtclibs -ldl /usr/lib/x86_64-linux-gnu/liblapack.so /usr/lib/x86_64-linux-gnu/libblas.so -ldl 
+make
+gfortran    -fpic -ffree-line-length-none -cpp -fdefault-real-8 -O3 -DNDEBUG -O3 /home/antonio/OpenFAST/build/glue-codes/openfast/CMakeFiles/openfast.dir/src/FAST_Prog.f90.o  -o glue-codes/openfast/openfast /home/antonio/OpenFAST/modules/servodyn/src/forpy_mod.o `python3-config --ldflags` -I/home/antonio/OpenFAST/build/ftnmods -lopenfast_postlib -lfoamfastlib -lscfastlib -lopenfast_prelib -lopenfoamtypeslib -laerodynlib -laerodyn14lib -lifwlib -lelastodynlib -lservodynlib -lbeamdynlib -lsubdynlib -lhydrodynlib -lorcaflexlib -lextptfm_mckflib -lfeamlib -lmoordynlib -licedynlib -licefloelib -lmaplib -lmapcpplib -lsctypeslib -lnwtclibs /usr/lib/x86_64-linux-gnu/liblapack.so /usr/lib/x86_64-linux-gnu/libblas.so -ldl -lversioninfolib -lstdc++ 
+make
+c++  -fpic -O3 -DNDEBUG  -rdynamic -pthread /home/antonio/OpenFAST/build/glue-codes/openfast-cpp/CMakeFiles/openfastcpp.dir/src/FAST_Prog.cpp.o  -o glue-codes/openfast-cpp/openfastcpp -Wl,-rpath,/usr/lib/x86_64-linux-gnu/openmpi/lib:/usr/lib/x86_64-linux-gnu/hdf5/serial: -lopenfastcpplib -lopenfastlib /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi_cxx.so /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi.so -lyaml-cpp /usr/lib/x86_64-linux-gnu/hdf5/serial/libhdf5.so -lpthread -lsz -lz -ldl -lm /usr/lib/x86_64-linux-gnu/hdf5/serial/libhdf5_hl.so -lz -lxml2 -ldl -lopenfast_postlib -lversioninfolib -lscfastlib -lfoamfastlib -lopenfast_prelib -laerodynlib -laerodyn14lib -lifwlib -lelastodynlib -lservodynlib -lbeamdynlib -lsubdynlib -lhydrodynlib -lorcaflexlib -lextptfm_mckflib -lsctypeslib -lfeamlib -lmoordynlib -licedynlib -licefloelib -lmaplib -lmapcpplib -lopenfoamtypeslib -lnwtclibs -llapack -lblas -ldl -lm /usr/lib/x86_64-linux-gnu/hdf5/serial/libhdf5_hl.so -lxml2 -ldl -lgfortran -lquadmath /home/antonio/OpenFAST/modules/servodyn/src/forpy_mod.o `python3-config --ldflags`
+make
+make install
+sudo cp /home/antonio/OpenFAST/install/bin/* /usr/local/bin; sudo cp -r /home/antonio/OpenFAST/install/include/* /usr/local/include; sudo cp /home/antonio/OpenFAST/build/ftnmods/* /usr/local/include/openfast; sudo cp -r /home/antonio/OpenFAST/install/lib/* /usr/local/lib

@@ -1,0 +1,7 @@
+# The fortran modules provided by this target.
+provides
+ qsort_c_module.mod
+ sd_fem.mod
+ subdyn.mod
+ subdyn_output.mod
+ subdyn_types.mod

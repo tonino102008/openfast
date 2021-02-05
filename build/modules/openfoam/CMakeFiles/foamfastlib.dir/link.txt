@@ -1,0 +1,2 @@
+/usr/bin/ar qc libfoamfastlib.a  CMakeFiles/foamfastlib.dir/src/OpenFOAM.f90.o
+/usr/bin/ranlib libfoamfastlib.a

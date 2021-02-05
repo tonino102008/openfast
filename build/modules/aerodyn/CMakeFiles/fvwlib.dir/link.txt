@@ -1,0 +1,2 @@
+/usr/bin/ar qc libfvwlib.a  CMakeFiles/fvwlib.dir/src/FVW.f90.o CMakeFiles/fvwlib.dir/src/FVW_IO.f90.o CMakeFiles/fvwlib.dir/src/FVW_VortexTools.f90.o CMakeFiles/fvwlib.dir/src/FVW_Wings.f90.o CMakeFiles/fvwlib.dir/src/FVW_Subs.f90.o CMakeFiles/fvwlib.dir/src/FVW_BiotSavart.f90.o CMakeFiles/fvwlib.dir/src/FVW_Tests.f90.o CMakeFiles/fvwlib.dir/src/FVW_Types.f90.o CMakeFiles/fvwlib.dir/src/FVW_VTK.f90.o
+/usr/bin/ranlib libfvwlib.a

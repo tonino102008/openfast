@@ -1,0 +1,11 @@
+cmake .. -DBUILD_OPENFAST_CPP_API:BOOL=ON -DFPE_TRAP_ENABLED:BOOL=ON
+make
+make install
+
+sudo cp /home/antonio/OpenFAST/install/bin/* /usr/local/bin
+sudo cp -r /home/antonio/OpenFAST/install/include/* /usr/local/include
+sudo cp /home/antonio/OpenFAST/build/ftnmods/* /usr/local/include/openfast
+sudo cp -r /home/antonio/OpenFAST/install/lib/* /usr/local/lib
+
+MODIFICA MAKEFILE in OpenFAST/build MENTRE INSTALLI mano a mano che vai avanti!!!!!!!
+

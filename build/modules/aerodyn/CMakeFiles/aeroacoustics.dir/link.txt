@@ -1,0 +1,2 @@
+/usr/bin/ar qc libaeroacoustics.a  CMakeFiles/aeroacoustics.dir/src/AeroAcoustics_TNO.f90.o CMakeFiles/aeroacoustics.dir/src/AeroAcoustics.f90.o CMakeFiles/aeroacoustics.dir/src/AeroAcoustics_IO.f90.o CMakeFiles/aeroacoustics.dir/src/AeroAcoustics_Types.f90.o
+/usr/bin/ranlib libaeroacoustics.a

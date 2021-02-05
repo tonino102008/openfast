@@ -1,0 +1,2 @@
+/usr/bin/ar qc libopenfastcpplib.a  CMakeFiles/openfastcpplib.dir/src/OpenFAST.cpp.o
+/usr/bin/ranlib libopenfastcpplib.a

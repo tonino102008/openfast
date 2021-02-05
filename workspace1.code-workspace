@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "/home/antonio/SOWFA"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"horizontalAxisWindTurbinesALMOpenFAST.C": "cpp",
+			"*.tcc": "cpp",
+			"stdexcept": "cpp"
+		}
+	}
+}

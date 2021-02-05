@@ -1,0 +1,2 @@
+/usr/bin/ar qc libopenfoamtypeslib.a  CMakeFiles/openfoamtypeslib.dir/OpenFOAM_Types.f90.o
+/usr/bin/ranlib libopenfoamtypeslib.a

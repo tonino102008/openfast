@@ -1,0 +1,2 @@
+/usr/bin/ar qc libopenfastlib.a  CMakeFiles/openfastlib.dir/src/FAST_Library.f90.o
+/usr/bin/ranlib libopenfastlib.a

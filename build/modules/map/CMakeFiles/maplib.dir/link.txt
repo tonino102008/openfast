@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmaplib.a  CMakeFiles/maplib.dir/src/map.f90.o CMakeFiles/maplib.dir/MAP_Types.f90.o
+/usr/bin/ranlib libmaplib.a
