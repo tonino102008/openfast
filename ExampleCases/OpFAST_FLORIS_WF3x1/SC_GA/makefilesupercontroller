@@ -1,0 +1,2 @@
+g++ -std=gnu++11 -fPIC -shared libsupercontroller.cpp -o libsupercontroller.so genAlg.o -I/usr/include/hdf5/serial
+g++ -c -fPIC genAlg.cpp

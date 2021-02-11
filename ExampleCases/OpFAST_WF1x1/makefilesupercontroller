@@ -1,0 +1,1 @@
+g++ -fPIC -shared libsupercontroller.cpp -o libsupercontroller.so -I/usr/include/hdf5/serial 
